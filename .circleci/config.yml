@@ -27,7 +27,7 @@ jobs:
     steps:
       - checkout_repo
       - install_packages
-
+      - run: yarn prepublish
       - run: yarn test:map
       - run: yarn test
 
