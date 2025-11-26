@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.4.1...v1.5.0) (2025-11-26)
+
+
+### Features
+
+* New Credit Currency ([#4](https://github.com/Pixel-Pioneers/lib.public.game-currency/issues/4)) ([244d6e0](https://github.com/Pixel-Pioneers/lib.public.game-currency/commit/244d6e0665ab48b4eb8d98e8861f6c8ef20b38c8))
+
 ## [1.4.1](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.4.0...v1.4.1) (2024-11-11)
 
 # [1.4.0](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.3.3...v1.4.0) (2024-07-01)
