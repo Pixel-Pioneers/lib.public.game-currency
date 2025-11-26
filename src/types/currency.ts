@@ -3,6 +3,7 @@ export enum GameCurrency {
   Bucks = 'XBK',
   GoldCoins = 'XGC',
   SweepsCoins = 'XSC',
+  Credits = 'CRD',
 }
 
 export enum GameCurrencyClass {
