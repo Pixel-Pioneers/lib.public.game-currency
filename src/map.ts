@@ -58,6 +58,15 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     storeFractionDigits: 2,
     redeemable: false,
   },
+  [GameCurrency.RCredits]: {
+    currencyCode: GameCurrency.RCredits,
+    displayCode: 'RCR',
+    currencyName: 'Credits',
+    currencyClass: GameCurrencyClass.Standard,
+    displayFractionDigits: 2,
+    storeFractionDigits: 4,
+    redeemable: true,
+  },
 }
 
 export { currencyConfigurationMapRaw }
