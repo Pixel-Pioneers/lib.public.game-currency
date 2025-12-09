@@ -7,6 +7,7 @@ describe('Game Currency', () => {
     expect(gameCurrency.currencyName('XBT')).to.be.deep.equal('Bits')
     expect(gameCurrency.currencyName('XBK')).to.be.deep.equal('Bucks')
     expect(gameCurrency.currencyName('CRD')).to.be.deep.equal('Credits')
+    expect(gameCurrency.currencyName('RCR')).to.be.deep.equal('Credits')
 
     expect(gameCurrency.currencyName('XXX')).to.be.deep.equal('XXX')
     // expect(() => gameCurrency.currencyName('XXX')).to.throw(Error)
@@ -16,6 +17,7 @@ describe('Game Currency', () => {
     expect(gameCurrency.currencyClass('XBT')).to.be.deep.equal(GameCurrencyClass.Standard)
     expect(gameCurrency.currencyClass('XBK')).to.be.deep.equal(GameCurrencyClass.Promotional)
     expect(gameCurrency.currencyClass('CRD')).to.be.deep.equal(GameCurrencyClass.Standard)
+    expect(gameCurrency.currencyClass('RCR')).to.be.deep.equal(GameCurrencyClass.Standard)
 
     expect(gameCurrency.currencyClass('XXX')).to.be.deep.equal(GameCurrencyClass.Standard)
     // expect(() => gameCurrency.currencyClass('XXX')).to.throw(Error)
@@ -25,6 +27,7 @@ describe('Game Currency', () => {
     expect(gameCurrency.currencyCode('XBT')).to.be.deep.equal(GameCurrency.Bits)
     expect(gameCurrency.currencyCode('XBK')).to.be.deep.equal(GameCurrency.Bucks)
     expect(gameCurrency.currencyCode('CRD')).to.be.deep.equal(GameCurrency.Credits)
+    expect(gameCurrency.currencyCode('RCR')).to.be.deep.equal(GameCurrency.RedeemableCredits)
 
     expect(gameCurrency.currencyCode('XXX')).to.be.deep.equal('XXX')
     // expect(() => gameCurrency.currencyCode('XXX')).to.throw(Error)
@@ -34,6 +37,7 @@ describe('Game Currency', () => {
     expect(gameCurrency.currencyDisplayCode('XBT')).to.be.deep.equal('BT')
     expect(gameCurrency.currencyDisplayCode('XBK')).to.be.deep.equal('BK')
     expect(gameCurrency.currencyDisplayCode('CRD')).to.be.deep.equal('CRD')
+    expect(gameCurrency.currencyDisplayCode('RCR')).to.be.deep.equal('RCR')
 
     expect(gameCurrency.currencyDisplayCode('XXX')).to.be.deep.equal('XXX')
     // expect(() => gameCurrency.currencyDisplayCode('XXX')).to.throw(Error)
@@ -51,7 +55,8 @@ describe('Game Currency', () => {
   it('Ensures roundDisplayCurrencyAmount for valid currencies', async () => {
     expect(gameCurrency.roundDisplayCurrencyAmount({ currency: 'XBT', amount: 1.99 })).to.be.deep.equal(1)
     expect(gameCurrency.roundDisplayCurrencyAmount({ currency: 'XBK', amount: 1.99 })).to.be.deep.equal(1.99)
-    expect(gameCurrency.roundDisplayCurrencyAmount({ currency: 'CRD', amount: 1.99 })).to.be.deep.equal(1)
+    expect(gameCurrency.roundDisplayCurrencyAmount({ currency: 'CRD', amount: 1.99 })).to.be.deep.equal(1.99)
+    expect(gameCurrency.roundDisplayCurrencyAmount({ currency: 'RCR', amount: 1.99 })).to.be.deep.equal(1.99)
 
     expect(gameCurrency.roundDisplayCurrencyAmount({ currency: 'XXX', amount: 1.99 })).to.be.deep.equal(1.99)
     // expect(() => gameCurrency.roundDisplayCurrencyAmount({ currency: 'XXX', amount: 1.99 })).to.throw(Error)
@@ -66,10 +71,17 @@ describe('Game Currency', () => {
       gameCurrency.formatCurrencyAmount({ currency: 'XBK', amount: 123456789.9999, display: 'code' }),
     ).to.be.deep.equal('123,456,789.99 BK')
     expect(gameCurrency.formatCurrencyAmount({ currency: 'CRD', amount: 1.99, display: 'name' })).to.be.deep.equal(
-      '1 Credits',
+      '1.99 Credits',
     )
     expect(gameCurrency.formatCurrencyAmount({ currency: 'CRD', amount: 1.99, display: 'code' })).to.be.deep.equal(
-      '1 CRD',
+      '1.99 CRD',
+    )
+
+    expect(gameCurrency.formatCurrencyAmount({ currency: 'RCR', amount: 1.99, display: 'name' })).to.be.deep.equal(
+      '1.99 Credits',
+    )
+    expect(gameCurrency.formatCurrencyAmount({ currency: 'RCR', amount: 1.99, display: 'code' })).to.be.deep.equal(
+      '1.99 RCR',
     )
 
     expect(gameCurrency.formatCurrencyAmount({ currency: 'XXX', amount: 1.99 })).to.be.deep.equal('1.99')
