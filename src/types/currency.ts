@@ -4,7 +4,7 @@ export enum GameCurrency {
   GoldCoins = 'XGC',
   SweepsCoins = 'XSC',
   Credits = 'CRD',
-  RCredits = 'RCR',
+  RedeemableCredits = 'RCR',
 }
 
 export enum GameCurrencyClass {
