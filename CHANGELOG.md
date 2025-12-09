@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.5.0...v1.6.0) (2025-12-09)
+
+
+### Features
+
+* Add RCredits currency configuration ([#5](https://github.com/Pixel-Pioneers/lib.public.game-currency/issues/5)) ([bd4e0aa](https://github.com/Pixel-Pioneers/lib.public.game-currency/commit/bd4e0aa11997bd7555e8792eb19a9ba8abe9bf80))
+
 # [1.5.0](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.4.1...v1.5.0) (2025-11-26)
 
 
