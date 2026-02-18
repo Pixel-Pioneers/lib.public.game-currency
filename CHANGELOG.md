@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.6.0...v1.7.0) (2026-02-18)
+
+
+### Features
+
+* **PIX-2244:** Rename Credits to Coins for RCR ([#6](https://github.com/Pixel-Pioneers/lib.public.game-currency/issues/6)) ([edb4d95](https://github.com/Pixel-Pioneers/lib.public.game-currency/commit/edb4d9582847cba45294bf81756076e834267deb))
+
 # [1.6.0](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.5.0...v1.6.0) (2025-12-09)
 
 
