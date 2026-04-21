@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.7.0...v1.8.0) (2026-04-21)
+
+
+### Features
+
+* **PIX-2650:** add GEM currency ([#7](https://github.com/Pixel-Pioneers/lib.public.game-currency/issues/7)) ([3f32819](https://github.com/Pixel-Pioneers/lib.public.game-currency/commit/3f32819ba78aed1baab70927b36b0a4f1afbb84d))
+
 # [1.7.0](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.6.0...v1.7.0) (2026-02-18)
 
 
