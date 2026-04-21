@@ -67,6 +67,15 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     storeFractionDigits: 4,
     redeemable: true,
   },
+  [GameCurrency.Gems]: {
+    currencyCode: GameCurrency.Gems,
+    displayCode: 'GEM',
+    currencyName: 'Gems',
+    currencyClass: GameCurrencyClass.Promotional,
+    displayFractionDigits: 2,
+    storeFractionDigits: 4,
+    redeemable: false,
+  },
 }
 
 export { currencyConfigurationMapRaw }
