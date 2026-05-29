@@ -57,6 +57,18 @@ describe('Game Currency', () => {
     // expect(() => gameCurrency.isCashableCurrency('XXX')).to.throw(Error)
   })
 
+  it('Ensures isConvertibleCurrency', async () => {
+    expect(gameCurrency.isConvertibleCurrency('XBT')).to.be.equal(false)
+    expect(gameCurrency.isConvertibleCurrency('XBK')).to.be.equal(false)
+    expect(gameCurrency.isConvertibleCurrency('XGC')).to.be.equal(false)
+    expect(gameCurrency.isConvertibleCurrency('XSC')).to.be.equal(false)
+    expect(gameCurrency.isConvertibleCurrency('CRD')).to.be.equal(false)
+    expect(gameCurrency.isConvertibleCurrency('RCR')).to.be.equal(false)
+    expect(gameCurrency.isConvertibleCurrency('GEM')).to.be.equal(true)
+
+    expect(gameCurrency.isConvertibleCurrency('XXX')).to.be.deep.equal(false)
+  })
+
   it('Ensures roundDisplayCurrencyAmount for valid currencies', async () => {
     expect(gameCurrency.roundDisplayCurrencyAmount({ currency: 'XBT', amount: 1.99 })).to.be.deep.equal(1)
     expect(gameCurrency.roundDisplayCurrencyAmount({ currency: 'XBK', amount: 1.99 })).to.be.deep.equal(1.99)
