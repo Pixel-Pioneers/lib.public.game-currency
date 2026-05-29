@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.8.0...v1.8.1) (2026-05-29)
+
+
+### Bug Fixes
+
+* **PIX-2650:** Checksum update ([#9](https://github.com/Pixel-Pioneers/lib.public.game-currency/issues/9)) ([22781a6](https://github.com/Pixel-Pioneers/lib.public.game-currency/commit/22781a6d70bcca5c44340f6f1ee66692f1f16443))
+
 # [1.8.0](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.7.0...v1.8.0) (2026-04-21)
 
 
