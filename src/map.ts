@@ -10,6 +10,7 @@ type CurrencyConfiguration = {
   displayFractionDigits: number
   storeFractionDigits: number
   redeemable: boolean
+  convertible: boolean
 }
 
 const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> = {
@@ -21,6 +22,7 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     displayFractionDigits: 0,
     storeFractionDigits: 2,
     redeemable: false,
+    convertible: false,
   },
   [GameCurrency.SweepsCoins]: {
     currencyCode: GameCurrency.SweepsCoins,
@@ -30,6 +32,7 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     displayFractionDigits: 2,
     storeFractionDigits: 4,
     redeemable: true,
+    convertible: false,
   },
   [GameCurrency.Bits]: {
     currencyCode: GameCurrency.Bits,
@@ -39,6 +42,7 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     displayFractionDigits: 0,
     storeFractionDigits: 2,
     redeemable: false,
+    convertible: false,
   },
   [GameCurrency.Bucks]: {
     currencyCode: GameCurrency.Bucks,
@@ -48,6 +52,7 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     displayFractionDigits: 2,
     storeFractionDigits: 4,
     redeemable: true,
+    convertible: false,
   },
   [GameCurrency.Credits]: {
     currencyCode: GameCurrency.Credits,
@@ -57,6 +62,7 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     displayFractionDigits: 2,
     storeFractionDigits: 4,
     redeemable: false,
+    convertible: false,
   },
   [GameCurrency.RedeemableCredits]: {
     currencyCode: GameCurrency.RedeemableCredits,
@@ -66,6 +72,7 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     displayFractionDigits: 2,
     storeFractionDigits: 4,
     redeemable: true,
+    convertible: false,
   },
   [GameCurrency.Gems]: {
     currencyCode: GameCurrency.Gems,
@@ -75,6 +82,7 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     displayFractionDigits: 2,
     storeFractionDigits: 4,
     redeemable: false,
+    convertible: true,
   },
 }
 

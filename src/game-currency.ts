@@ -33,6 +33,10 @@ function isCashableCurrency(input: CurrencyInput): boolean {
   return !!currencyConfigurationMapRaw[input as GameCurrency]?.redeemable
 }
 
+function isConvertibleCurrency(input: CurrencyInput): boolean {
+  return !!currencyConfigurationMapRaw[input as GameCurrency]?.convertible
+}
+
 function roundDisplayCurrencyAmount({ amount, currency, fullFractionDigits }: GameCurrencyRoundParams): number {
   const { displayFractionDigits = 2, storeFractionDigits = 4 } =
     currencyConfigurationMapRaw[currency as GameCurrency] || {}
@@ -91,6 +95,7 @@ const gameCurrency = {
   currencyDisplayCode,
   isCurrency,
   isCashableCurrency,
+  isConvertibleCurrency,
   roundDisplayCurrencyAmount,
   formatCurrencyAmount,
 }
