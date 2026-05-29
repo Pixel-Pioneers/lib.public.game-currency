@@ -67,7 +67,6 @@ describe('Game Currency', () => {
     expect(gameCurrency.isConvertibleCurrency('GEM')).to.be.equal(true)
 
     expect(gameCurrency.isConvertibleCurrency('XXX')).to.be.deep.equal(false)
-    // expect(() => gameCurrency.isConvertibleCurrency('XXX')).to.throw(Error)
   })
 
   it('Ensures roundDisplayCurrencyAmount for valid currencies', async () => {
