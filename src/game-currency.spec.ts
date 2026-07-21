@@ -3,7 +3,7 @@ import { gameCurrency } from './game-currency'
 import { GameCurrency, GameCurrencyClass } from './types/currency'
 
 describe('Game Currency', () => {
-  it('Ensures currencyName', ;async () => {
+  it('Ensures currencyName', async () => {
     expect(gameCurrency.currencyName('XBT')).to.be.deep.equal('Bits')
     expect(gameCurrency.currencyName('XBK')).to.be.deep.equal('Bucks')
     expect(gameCurrency.currencyName('CRD')).to.be.deep.equal('Credits')
