@@ -6,6 +6,7 @@ type CurrencyConfiguration = {
   currencyCode: GameCurrency
   displayCode: string
   currencyName: string
+  singularName?: string
   currencyClass: GameCurrencyClass
   displayFractionDigits: number
   storeFractionDigits: number
@@ -68,6 +69,7 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     currencyCode: GameCurrency.RedeemableCredits,
     displayCode: 'RCR',
     currencyName: 'Coins',
+    singularName: 'Coin',
     currencyClass: GameCurrencyClass.Standard,
     displayFractionDigits: 2,
     storeFractionDigits: 4,
@@ -78,6 +80,7 @@ const currencyConfigurationMapRaw: Record<GameCurrency, CurrencyConfiguration> =
     currencyCode: GameCurrency.Gems,
     displayCode: 'GEM',
     currencyName: 'Gems',
+    singularName: 'Gem',
     currencyClass: GameCurrencyClass.Promotional,
     displayFractionDigits: 2,
     storeFractionDigits: 4,

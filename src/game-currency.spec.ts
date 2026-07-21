@@ -3,7 +3,7 @@ import { gameCurrency } from './game-currency'
 import { GameCurrency, GameCurrencyClass } from './types/currency'
 
 describe('Game Currency', () => {
-  it('Ensures currencyName', async () => {
+  it('Ensures currencyName', ;async () => {
     expect(gameCurrency.currencyName('XBT')).to.be.deep.equal('Bits')
     expect(gameCurrency.currencyName('XBK')).to.be.deep.equal('Bucks')
     expect(gameCurrency.currencyName('CRD')).to.be.deep.equal('Credits')
@@ -12,6 +12,13 @@ describe('Game Currency', () => {
 
     expect(gameCurrency.currencyName('XXX')).to.be.deep.equal('XXX')
     // expect(() => gameCurrency.currencyName('XXX')).to.throw(Error)
+
+    // singular form only for amount === 1, and only where a singularName exists
+    expect(gameCurrency.currencyName('RCR', 1)).to.be.deep.equal('Coin')
+    expect(gameCurrency.currencyName('GEM', 1)).to.be.deep.equal('Gem')
+    expect(gameCurrency.currencyName('RCR', 2)).to.be.deep.equal('Coins')
+    expect(gameCurrency.currencyName('XBT', 1)).to.be.deep.equal('Bits')
+    expect(gameCurrency.currencyName('GEM', 2)).to.be.deep.equal('Gems')
   })
 
   it('Ensures currencyClass for valid currencies', async () => {
