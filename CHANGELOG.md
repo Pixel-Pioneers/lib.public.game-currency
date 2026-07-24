@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.8.1...v1.9.0) (2026-07-24)
+
+
+### Features
+
+* add singular currency names for Coins and Gems ([#11](https://github.com/Pixel-Pioneers/lib.public.game-currency/issues/11)) ([cef9a48](https://github.com/Pixel-Pioneers/lib.public.game-currency/commit/cef9a489ecfbe1ae227f8faa47d5af3cb966dc73))
+
 ## [1.8.1](https://github.com/Pixel-Pioneers/lib.public.game-currency/compare/v1.8.0...v1.8.1) (2026-05-29)
 
 
