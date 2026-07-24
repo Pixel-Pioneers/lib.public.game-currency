@@ -9,8 +9,10 @@ import {
 } from './types'
 import Mustache = require('mustache')
 
-function currencyName(input: CurrencyInput): string {
-  return currencyConfigurationMapRaw[input as GameCurrency]?.currencyName || input
+function currencyName(input: CurrencyInput, amount?: number): string {
+  const config = currencyConfigurationMapRaw[input as GameCurrency]
+  if (!config) return input
+  return amount === 1 && config.singularName ? config.singularName : config.currencyName
 }
 
 function currencyClass(input: CurrencyInput): GameCurrencyClass {
@@ -78,7 +80,7 @@ function formatCurrencyAmount({
   })
 
   let currencyDisplay =
-    display === 'name' ? currencyName(currency) : display === 'code' ? currencyDisplayCode(currency) : ''
+    display === 'name' ? currencyName(currency, amount) : display === 'code' ? currencyDisplayCode(currency) : ''
 
   const result = Mustache.render(displayTemplate ?? defaultTemplate, {
     currencyValue: formattedValue,
